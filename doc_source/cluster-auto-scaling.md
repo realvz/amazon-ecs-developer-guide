@@ -94,7 +94,7 @@ For a more detailed explanation of how this logic works, see [Deep dive on Amazo
 
 1. When a scale\-out process is required and there are no available container instances, and then a container instance becomes available, Amazon ECS always scales\-out to 200% \(two instances\)\.
 
-1. The `instanceWarmupPeriod` might affect the overall scale limit, because second scale\-out step needs to wait until the `instanceWarmupPeriod` time expires\. \. If you need to reduce this time, make sure that the value is large enough for the EC2 instance to launch and start the Amazon ECS agent \(which prevents over\-provisioning\)\.
+1. The `instanceWarmupPeriod` might affect the overall scale limit, because second scale\-out step needs to wait until the `instanceWarmupPeriod` time expires\. If you need to reduce this time, make sure that the value is large enough for the EC2 instance to launch and start the Amazon ECS agent \(which prevents over\-provisioning\)\.
 
 1. Cluster Auto Scaling supports Launch Configuration, Launch Templates and multiple instance types in the capacity provider Auto Scaling group\. You can also use attribute\-based instance type selection without multiple instances types\.
 
